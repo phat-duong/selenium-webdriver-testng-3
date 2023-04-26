@@ -44,6 +44,7 @@ public class Topic_20_Wait_Part_VI_Mixing {
         System.out.println("2.1 - Start explicit wait" + getDateTimeNow());
         explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("email")));
         System.out.println("2.2 - End explicit wait" + getDateTimeNow());
+
     }
 
     @Test
@@ -51,7 +52,6 @@ public class Topic_20_Wait_Part_VI_Mixing {
 
         driver.get("https://facebook.com/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 
         System.out.println("1.1 - Start implicit wait" + getDateTimeNow());
         try {

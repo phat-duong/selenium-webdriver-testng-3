@@ -54,7 +54,7 @@ public class Topic_20_Wait_Part_VII_Fluent {
                 //cơ chế tìm lại nếu chưa thỏa mãn điều kiện là 0.5s tìm lại 1 lần
                 .pollingEvery(Duration.ofMillis(500))
 
-                //nếu như trong thời gian tìm lại mà k thấy element
+                //nếu như trong thời gian tìm lại mà k thấy element sẽ bỏ qua
                 .ignoring(NoSuchElementException.class)
 
                 //xử lý điều kiện
@@ -153,11 +153,13 @@ public class Topic_20_Wait_Part_VII_Fluent {
         return rand.nextInt(99999);
     }
 
+    private long sumTime = 30;
+    private long pollTime = 1;
     //findElement (Custom)
     public WebElement getWebElement(By locator) {
         FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(30))
-                .pollingEvery(Duration.ofSeconds(1))
+                .withTimeout(Duration.ofSeconds(sumTime))
+                .pollingEvery(Duration.ofSeconds(pollTime))
                 .ignoring(NoSuchElementException.class);
         WebElement element = wait.until(new Function<WebDriver, WebElement>() {
             public WebElement apply(WebDriver driver) {
