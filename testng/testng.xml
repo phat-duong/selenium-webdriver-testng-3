@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Facebook">
+<!--    <groups>-->
+<!--        <run>-->
+<!--            <include name = "admin"/>-->
+<!--        </run>-->
+<!--    </groups>-->
+
+<!--    Muốn chạy trên nhiều môi trường server dev, stg, prod thì dùng parameter-->
+    <parameter name="server" value="DEV"/>
+
+    <test name="Run on CHROME browser">
+<!--        Muốn cho chạy trên nhiều browser thì dùng parameter-->
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+<!--            <class name="tech.Topic_01_Annotation"/>-->
+<!--            cau truc: {ten package}.{ten class}-->
+            <class name="tech.Topic_06_Multiple_Server"/>
+
+        </classes>
+
+<!--        Cách 2: có thể chạy bằng package mà không cần chạy class-->
+<!--        <packages>-->
+<!--            <package name = "admin" />-->
+<!--        </packages>-->
+
+    </test> <!-- Test -->
+
+    <test name="Run on FIREFOX browser">
+        <!--        Muốn cho chạy trên nhiều browser thì dùng parameter-->
+        <parameter name="browser" value="firefox"/>
+
+        <classes>
+            <class name="tech.Topic_05_Multiple_Browser"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

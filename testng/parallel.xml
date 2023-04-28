@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Facebook" parallel="tests" thread-count="3">
+
+<!--    Riêng 1 Thread-->
+    <test name="First Test">
+        <classes>
+            <class name="parallel.Topic_07_First_Class"/>
+            <class name="parallel.Topic_07_Second_Class"/>
+            <class name="parallel.Topic_07_Third_Class"/>
+            <class name="parallel.Topic_07_Fourth_Class"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <!--    Riêng 1 Thread-->
+<!--    <test name="Second Test">-->
+<!--        <classes>-->
+<!--            <class name="parallel.Topic_07_Third_Class"/>-->
+<!--            <class name="parallel.Topic_07_Fourth_Class"/>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+</suite> <!-- Suite -->
